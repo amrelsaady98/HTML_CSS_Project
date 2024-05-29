@@ -42,7 +42,8 @@ body{
 .logo{
   color: var(--text-color);
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  letter-spacing: 4px;
   cursor: pointer;
 
 }
@@ -66,14 +67,16 @@ body{
 
 
 }
-.links-container a{
+.links-container a, .links-container a:visited, .links-container a:hover{
   border-bottom: 3px solid var(--transparent-color);
+  color: var(--text-color);
   text-decoration: none;
   padding: 0.2em 0;
   margin: 0 1.5em;
   cursor: pointer;
   animation: item-zoom-out 0.2s;
   transition: 0.2s;
+
 }
 
 .links-container a:hover{
@@ -183,6 +186,63 @@ body{
   color: var(--main-text-color);
   font-weight: 600;
 }
+
+/**=======================start education section======================*/
+#education-section{
+  align-items: end;
+  padding-top: 4em;
+  height: 50vh;
+}
+.education-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:  var(--vertical-padding) var(--horisontal-padding);
+}
+.education-container h1{
+  font-size: 4em;
+
+}
+.education-container::before{
+  content: "";
+  position: absolute;
+  border-radius: 12px;
+  left: calc(50% - 6px);
+  width: 6px;
+  height: 100%;
+  margin-top: 15vh;
+  background-color: var(--main-text-color);
+}
+.education-item {
+  width: 100%;
+  margin-right: calc(50% + 2em);
+  margin-top: 1em;
+  border: 3px solid var(--main-text-color);
+  border-radius: 3em;
+  padding: 2em;
+  text-align: right;
+}
+.education-dot{
+  width: 2em;
+  height: 2em;
+  background-color: var(--main-text-color);
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 1em - 3px);
+}
+.education-item .education-date{
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+.education-item h2{
+  font-size: 1.5em;
+  padding: 12px 0px;
+
+}
+
+
+
+/**=======================end education section========================*/
 
 
 
