@@ -45,6 +45,12 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--main-text-color);
 }
+.section-title{
+  margin-bottom: 1em;
+  text-align: center;
+  align-self: center;
+  font-size: 4em;
+}
 /** --------------------------Start Header Section----------------------*/
 
 #header-section {
@@ -58,6 +64,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: flex-end;
   background-color: var(--background-color);
+  z-index: 10;
 }
 
 .logo {
@@ -246,9 +253,9 @@ body::-webkit-scrollbar-thumb {
   padding: var(--vertical-padding) var(--horisontal-padding);
 }
 
-.education-container h1 {
+/*.education-container h1 {
   font-size: 4em;
-}
+}*/
 
 .education-container::before {
   content: "";
@@ -308,12 +315,12 @@ body::-webkit-scrollbar-thumb {
 /**=======================end education section========================*/
 
 
-#experience-header{
-margin-bottom: 1em;
-  text-align: center;
-  align-self: center;
-  font-size: 4em;
-}
+/*#experience-header{*/
+/*margin-bottom: 1em;*/
+/*  text-align: center;*/
+/*  align-self: center;*/
+/*  font-size: 4em;*/
+/*}*/
 
 #experience-section {
   padding: var(--sectionPadding);
@@ -371,7 +378,7 @@ margin-bottom: 1em;
   content: "";
   position: absolute;
   height: 100%;
-  width: 0%;
+  width: 0;
   background: #000;
   opacity: 1;
   top: 0;
@@ -449,7 +456,7 @@ margin-bottom: 1em;
   border-top: 1px solid var(--main-text-color);
   border-radius: 0.5rem 0 0 0.5rem;
   top: 1px;
-  bottom: 0px;
+  bottom: 0;
 }
 
 #experience-section .cs-item:nth-of-type(4) .cs-item-text:before {
@@ -511,7 +518,7 @@ margin-bottom: 1em;
 }
 
 #experience-section .cs-item-text:after {
-  /* list circle */
+
   content: "";
   width: 0.5rem;
   height: 0.5rem;
@@ -546,6 +553,57 @@ margin-bottom: 1em;
   /* 20px - 25px - this pulls the section up so it's flush with the top of the left section, the padding top on the .cs-item-text is creating a gap at the top of the section. Wrapped in a calc() function to turn clamp() value into a negative number */
   margin-top: calc(clamp(1.25rem, 2vw, 1.5625rem) * -1);
 }
+
+/**========================== Start Portfolio Section ==================*/
+#portfolio-section{
+  height: 90vh;
+
+}
+
+.portfolio-container{
+  height: 60%;
+  margin: var(--vertical-padding) var(--horisontal-padding);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.portfolio-item{
+  position: relative;
+  width: 30%;
+  height: 100%;
+  margin: 1em;
+  border-radius: 1.55em;
+  border: 3px solid var(--main-text-color);
+  box-sizing: content-box;
+  display: inline-block;
+  flex-direction: column;
+  scale: calc(1);
+  transition: 0.2s;
+}
+.portfolio-item:hover{
+  scale: calc(1.05);
+  transition: 0.2s;
+  box-shadow: 0 0 25px var(--main-text-color), 0 0 30px var(--main-text-color), 0 0 40px var(--main-text-color);
+
+}
+
+.portfolio-item span{
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+}
+.portfolio-item-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.5em;
+  filter: hue-rotate(60deg) blur(2px);
+}
+.portfolio-item-image:hover{
+  filter: hue-rotate(90deg) blur(0px);
+}
+
 
 
 /* ==========================================================================
